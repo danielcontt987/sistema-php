@@ -8,7 +8,9 @@
         <meta name="author" content="" />
         <title>Login</title>
         <link href="<?php echo base_url; ?>/Assets/css/styles.css" rel="stylesheet" />
+        <link href="<?php echo base_url; ?>/Assets/css/sweetalert2.min.css" rel="stylesheet" />
         <script src="<?php echo base_url; ?>/Assets/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="<?php echo base_url; ?>/Assets/js/sweetalert2.all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -20,17 +22,17 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
-                                        <form>
+                                        <form id="frmLogin">
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                                <label class="small mb-1" for="inputEmailAddress">User</label>
+                                                <input class="form-control py-4" id="user" name="user" type="text" placeholder="Enter your user" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Password</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                                <input class="form-control py-4" id="psw" name="psw" type="password" placeholder="Enter password" />
                                             </div>
                                             <div class="form-group ">
-                                                <a class="btn btn-primary btn-lg btn-block" href="index.html">Login</a>
+                                                <button class="btn btn-primary btn-block" type="submit" onclick="frmLogin(event)">Login</button>
                                             </div>
                                         </form>
                                     </div>
@@ -40,23 +42,13 @@
                     </div>
                 </main>
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
         </div>
         <script src="<?php echo base_url; ?>/Assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="<?php echo base_url; ?>/Assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="<?php echo base_url; ?>/Assets/js/scripts.js"></script>
+        <script src="<?php echo base_url; ?>/Assets/js/functions.js"></script>
+        <script>
+            const base_url = "<?php echo base_url; ?>";
+        </script>
     </body>
 </html>
